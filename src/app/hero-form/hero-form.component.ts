@@ -9,7 +9,6 @@ import { Hero } from '../hero';
 })
 export class HeroFormComponent {
 
-  
 
   powers = ['Really Smart', 'Super Flexible',
             'Super Hot', 'Weather Changer'];
@@ -19,5 +18,14 @@ export class HeroFormComponent {
   submitted = false;
 
   onSubmit() { this.submitted = true; }
+
+  skyDog(): Hero {
+    const myHero =  new Hero(42, 'SkyDog',
+                           'Fetch any object at any distance',
+                           'Leslie Rollover');
+    console.log('My hero is called ' + myHero.name); // "My hero is called SkyDog"
+    console.log(`My hero id is ${myHero.id}`)
+    return myHero;
+  }
 
 }
